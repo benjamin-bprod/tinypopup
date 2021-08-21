@@ -1,0 +1,47 @@
+/* OVERLAY */
+.tinypopup-overlay{
+    position:fixed;
+    background-color:black;
+    top:0;
+    left:0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.tinypopup-overlay.active {
+    animation: appear .4s;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+}
+.tinypopup-overlay.active.unactive {
+    animation: disappear .4s;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+@keyframes appear {
+    0% {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+    100% {
+        opacity: .4;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: .4;
+        width: 100%;
+        height: 100%;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+}
